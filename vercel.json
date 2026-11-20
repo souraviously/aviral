@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "groom": {
+      "src": "wedding-invitation-groom",
+      "buildCommand": "npm install && npm run build",
+      "outputDirectory": "dist"
+    },
+    "bride": {
+      "src": "wedding-invitation-bride",
+      "buildCommand": "npm install && npm run build",
+      "outputDirectory": "dist"
+    }
+  }
+}

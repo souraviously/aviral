@@ -1,0 +1,109 @@
+import React from 'react';
+import { WeddingConfig } from '../types';
+import { RoyalCorner, GoldDivider } from './Ornaments';
+import { useLanguage } from '../context/LanguageContext';
+import { ScrollReveal } from './ScrollReveal';
+
+export const CoupleSection: React.FC<{ wedding: WeddingConfig }> = ({ wedding }) => {
+  const { groom, bride } = wedding.couple;
+  const { t } = useLanguage();
+
+  return (
+    <section className="py-20 px-4 max-w-6xl mx-auto relative">
+      <div className="text-center mb-14">
+        <p className="font-script text-2xl sm:text-3xl text-[var(--text-primary)] py-0.5">
+          {t('couple.subtitle')}
+        </p>
+        <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-gold-gradient tracking-wider uppercase mt-1 pt-2 pb-1 inline-block leading-snug">
+          {t('couple.title')}
+        </h2>
+        <GoldDivider variant="lotus" className="max-w-xs mx-auto my-4" />
+      </div>
+
+      {/* Split Screen / Stacked Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+        {/* Bride Card */}
+        <ScrollReveal delay={0.05} className="h-full">
+          <div className="relative group rounded-3xl p-6 sm:p-8 bg-[var(--bg-card)]/80 border border-[var(--accent-gold)]/35 backdrop-blur-md shadow-[0_15px_40px_rgba(0,0,0,0.6)] flex flex-col justify-between transition-all duration-500 hover:border-[var(--accent-gold)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.2)] h-full">
+          <RoyalCorner position="top-left" />
+          <RoyalCorner position="top-right" />
+          <RoyalCorner position="bottom-left" />
+          <RoyalCorner position="bottom-right" />
+
+          <div>
+            {/* Square Portrait Image Frame */}
+            <div className="relative mx-auto w-60 h-60 sm:w-56 sm:h-56 aspect-square rounded-2xl overflow-hidden border-2 border-[var(--accent-gold)]/60 shadow-[0_10px_25px_rgba(0,0,0,0.8)] mb-6 group-hover:scale-103 transition-transform duration-500">
+              <img
+                src={bride.image}
+                alt={bride.fullName}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover object-[center_15%] filter brightness-95 contrast-105 group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card-dark)]/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2 left-0 right-0 text-center">
+                <span className="font-cinzel text-[10px] font-bold tracking-[0.25em] text-white uppercase bg-[var(--brand-crimson-dark)]/80 px-3 py-0.5 rounded-full border border-[var(--accent-gold)]/40">
+                  {bride.title}
+                </span>
+              </div>
+            </div>
+
+            {/* Bride Details */}
+            <div className="text-center">
+              <h3 className="font-cinzel-dec text-2xl sm:text-3xl font-bold text-gold-gradient tracking-wide pt-2 pb-1 inline-block leading-normal">
+                {bride.fullName}
+              </h3>
+              
+              <div className="text-xs font-cinzel font-semibold text-[var(--accent-gold)] tracking-wider uppercase mt-1">
+                {t('couple.daughterOf')} {bride.parents}
+              </div>
+
+              <p className="text-xs sm:text-sm font-sans text-[var(--text-secondary)] mt-4 leading-relaxed max-w-md mx-auto">
+                {bride.bio}
+              </p>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      {/* Groom Card */}
+      <ScrollReveal delay={0.2} className="h-full">
+        <div className="relative group rounded-3xl p-6 sm:p-8 bg-[var(--bg-card)]/80 border border-[var(--accent-gold)]/35 backdrop-blur-md shadow-[0_15px_40px_rgba(0,0,0,0.6)] flex flex-col justify-between transition-all duration-500 hover:border-[var(--accent-gold)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.2)] h-full">
+          <RoyalCorner position="top-left" />
+          <RoyalCorner position="top-right" />
+          <RoyalCorner position="bottom-left" />
+          <RoyalCorner position="bottom-right" />
+
+          <div>
+            {/* Square Portrait Image Frame */}
+            <div className="relative mx-auto w-60 h-60 sm:w-56 sm:h-56 aspect-square rounded-2xl overflow-hidden border-2 border-[var(--accent-gold)]/60 shadow-[0_10px_25px_rgba(0,0,0,0.8)] mb-6 group-hover:scale-103 transition-transform duration-500">
+              <img
+                src={groom.image}
+                alt={groom.fullName}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover object-[center_15%] filter brightness-95 contrast-105 group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-card-dark)]/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2 left-0 right-0 text-center">
+                <span className="font-cinzel text-[10px] font-bold tracking-[0.25em] text-white uppercase bg-[var(--brand-crimson-dark)]/80 px-3 py-0.5 rounded-full border border-[var(--accent-gold)]/40">
+                  {groom.title}
+                </span>
+              </div>
+            </div>
+
+            {/* Groom Details */}
+            <div className="text-center">
+              <h3 className="font-cinzel-dec text-2xl sm:text-3xl font-bold text-gold-gradient tracking-wide pt-2 pb-1 inline-block leading-normal">
+                {groom.fullName}
+              </h3>
+              
+              <div className="text-xs font-cinzel font-semibold text-[var(--accent-gold)] tracking-wider uppercase mt-1">
+                {t('couple.sonOf')} {groom.parents}
+              </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+    </div>
+  </section>
+  );
+};

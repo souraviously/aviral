@@ -1,0 +1,12 @@
+{
+  "name": "wedding-invitation-suite",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:bride": "npm --prefix wedding-invitation-bride run dev",
+    "dev:groom": "npm --prefix wedding-invitation-groom run dev",
+    "dev:both": "npm run dev:bride & npm run dev:groom",
+    "build:bride": "npm --prefix wedding-invitation-bride run build",
+    "build:groom": "npm --prefix wedding-invitation-groom run build"
+  }
+}

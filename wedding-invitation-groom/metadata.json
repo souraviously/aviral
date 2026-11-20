@@ -1,0 +1,6 @@
+{
+  "name": "Rahul & Avantika — Royal Wedding Invitation",
+  "description": "A cinematic, luxury interactive Indian digital wedding invitation for Rahul & Avantika at Utsav Banquet, Dhanbad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

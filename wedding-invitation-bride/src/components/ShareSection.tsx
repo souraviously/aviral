@@ -20,7 +20,7 @@ export const ShareSection: React.FC<{ wedding: WeddingConfig }> = ({ wedding }) 
     };
   }, [showQR]);
 
-  const shareUrl = "https://harshita-weds-satyam.vercel.app";
+  const shareUrl = "https://avantikawedsrahul.vercel.app/";
   
   const inviteMessage = isHindi
     ? `🪔 *॥ श्री गणेशाय नमः ॥* 🪔

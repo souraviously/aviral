@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Royal Indian Floral / Paisley Divider with Center Lotus / Diamond
-export const GoldDivider: React.FC<{ className?: string; variant?: 'lotus' | 'diamond' | 'paisley' }> = ({
+export const GoldDivider: React.FC<{ className?: string; variant?: 'lotus' | 'diamond' | 'paisley' | 'crest' | 'imperial' }> = ({
   className = '',
   variant = 'lotus',
 }) => {
@@ -25,6 +25,34 @@ export const GoldDivider: React.FC<{ className?: string; variant?: 'lotus' | 'di
         </svg>
       )}
       <div className="h-[1px] w-12 sm:w-24 bg-gradient-to-l from-transparent via-[var(--accent-gold)] to-[var(--accent-gold)]" />
+    </div>
+  );
+};
+
+// Imperial Corner Bracket with Stepped Hairlines and Diamond Accent
+export const ImperialCorner: React.FC<{
+  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  className?: string;
+  size?: number;
+}> = ({ position, className = '', size = 38 }) => {
+  const rotateClass = {
+    'top-left': 'top-0 left-0',
+    'top-right': 'top-0 right-0 rotate-90',
+    'bottom-right': 'bottom-0 right-0 rotate-180',
+    'bottom-left': 'bottom-0 left-0 -rotate-90',
+  }[position];
+
+  return (
+    <div className={`absolute ${rotateClass} pointer-events-none p-1.5 ${className}`} style={{ width: size, height: size }}>
+      <svg viewBox="0 0 38 38" fill="none" className="w-full h-full text-[var(--accent-gold)]">
+        {/* Outer sharp corner bracket */}
+        <path d="M0 0 H36 V3 H3 V36 H0 V0 Z" fill="currentColor" opacity="0.9" />
+        {/* Inner stepped hairline */}
+        <path d="M7 7 H26 V9 H9 V26 H7 V7 Z" fill="currentColor" opacity="0.5" />
+        {/* Center royal diamond jewel */}
+        <polygon points="14,14 17,11 20,14 17,17" fill="currentColor" opacity="0.95" />
+        <circle cx="3" cy="3" r="1.5" fill="currentColor" />
+      </svg>
     </div>
   );
 };

@@ -17,6 +17,7 @@ import { GallerySection } from './components/GallerySection';
 import { VenueSection } from './components/VenueSection';
 import { FamilySection } from './components/FamilySection';
 import { ShareSection } from './components/ShareSection';
+import { StorySection } from './components/StorySection';
 import { FinalSection } from './components/FinalSection';
 import { EasterEggModal } from './components/EasterEggs';
 import { ThemeSwitcher } from './components/ThemeSwitcher';
@@ -161,11 +162,14 @@ export default function App() {
         {/* 9. Social Sharing & WhatsApp Invite Generator */}
         <ShareSection wedding={activeWeddingData} />
 
-        {/* 10. Emotional Climax & Closing */}
-          <FinalSection
-            wedding={activeWeddingData}
-            onScrollToTop={scrollToTop}
-          />
+        {/* 10. A Tale of Two Hearts - Our Story */}
+        <StorySection wedding={activeWeddingData} />
+
+        {/* 11. Emotional Climax & Closing (Two Hearts, One Journey, Forever) */}
+        <FinalSection
+          wedding={activeWeddingData}
+          onScrollToTop={scrollToTop}
+        />
         </div>
       </main>
 

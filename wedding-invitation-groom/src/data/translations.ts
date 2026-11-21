@@ -98,6 +98,13 @@ export const translations = {
       qrModalSubtitle: "Scan with mobile camera to open the invitation",
       close: "Close",
     },
+    story: {
+      subtitle: "A TALE OF TWO HEARTS",
+      title: "Our Story",
+      p1: "Two strangers crossed paths, became friends, and somewhere between countless conversations and little moments, we fell in love",
+      p2: "From friends to soulmates, our paths led us to forever.",
+      p3: "And just like that... we met, we fell, and we got married.",
+    },
     final: {
       subtitle: "Awaiting Your Gracious Presence",
       twoHearts: "TWO HEARTS",
@@ -215,6 +222,13 @@ export const translations = {
       qrModalTitle: "आमंत्रण क्यूआर कोड",
       qrModalSubtitle: "मोबाइल कैमरे से स्कैन करके निमंत्रण पत्र खोलें",
       close: "बंद करें",
+    },
+    story: {
+      subtitle: "दो दिलों की दास्तां",
+      title: "हमारी कहानी",
+      p1: "दो अजनबी मिले, दोस्त बने, और अनगिनत बातों और छोटे-छोटे लम्हों के दरमियाँ हमें प्यार हो गया",
+      p2: "दोस्ती से हमसफ़र तक, हमारी राहें हमें हमेशा के लिए एक साथ ले आईं।",
+      p3: "और यूँ ही... हम मिले, दिल जुड़े, और हम परिणय सूत्र में बंध गए।",
     },
     final: {
       subtitle: "आपकी गरिमामयी उपस्थिति की प्रतीक्षा में",
